@@ -191,7 +191,7 @@ export class NavigationService {
   separatorMenu:IMenuItem[] = [
     {
       type: 'separator',
-      name: 'Custom components'
+      name: 'Main Product'
     },
     {
       name: 'DASHBOARD',
