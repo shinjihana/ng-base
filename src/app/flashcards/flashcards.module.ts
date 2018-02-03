@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 import { FlashcardsRoutingModule } from './flashcards-routing.module';
+import { MaterialModule } from '../material';
 
 import { FlashcardsComponentsModule } from './components/index';
 
@@ -10,6 +11,7 @@ import { FlashcardsComponentsModule } from './components/index';
   imports: [
     CommonModule,
     HttpClientModule,
+    MaterialModule,
     FlashcardsRoutingModule,
     FlashcardsComponentsModule,
   ],
