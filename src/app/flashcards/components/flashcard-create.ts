@@ -2,7 +2,7 @@ import { Component, Input, Output, EventEmitter, OnInit} from '@angular/core';
 
 import { Flashcard } from './../models/flashcard';
 
-import * as firebase from 'firebase';
+// import * as firebase from 'firebase';
 
 import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormControl, FormArray, Validators } from '@angular/forms';
@@ -117,7 +117,7 @@ export class FlashcardCreateComponent implements OnInit {
       storageBucket: "flash-e5dae.appspot.com",
       messagingSenderId: "361977436267"
     }
-    firebase.initializeApp(config);
+    // firebase.initializeApp(config);
   }
 
   getDataFromFirebase(){

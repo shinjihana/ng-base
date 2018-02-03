@@ -201,6 +201,13 @@ export class NavigationService {
       state: 'dashboard'
     },
     {
+      name: 'Flashcard',
+      type: 'link',
+      tooltip: 'Flashcard',
+      icon: 'dashboard',
+      state: 'flashcard'      
+    },
+    {
       name: 'INBOX',
       type: 'link',
       tooltip: 'Inbox',
