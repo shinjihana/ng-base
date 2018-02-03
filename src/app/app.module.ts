@@ -6,7 +6,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate/ng2-translate';
 
 import { rootRouterConfig } from './app.routes';
+
 import { AppCommonModule } from "./core/components/app-common.module";
+import { FlashcardsModule } from './flashcards/flashcards.module';
+
 import { AppComponent } from './app.component';
 
 import { RoutePartsService } from './core/services/route-parts/route-parts.service';
@@ -23,6 +26,7 @@ export function createTranslateLoader(http: Http) {
     BrowserAnimationsModule,
     HttpModule,
     AppCommonModule,
+    FlashcardsModule,
     TranslateModule.forRoot({
       provide: TranslateLoader,
       useFactory: (createTranslateLoader),
