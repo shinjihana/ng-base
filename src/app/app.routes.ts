@@ -12,10 +12,6 @@ export const rootRouterConfig: Routes = [
     pathMatch: 'full' 
   },
   {
-    path: 'flashcard',
-    loadChildren : './flashcards/flashcards.module#FlashcardsModule',
-  },
-  {
     path: '', 
     component: AuthLayoutComponent,
     children: [
@@ -35,6 +31,10 @@ export const rootRouterConfig: Routes = [
         path: 'dashboard', 
         loadChildren: './views/dashboard/dashboard.module#DashboardModule', 
         data: { title: 'Dashboard', breadcrumb: 'DASHBOARD'}
+      },
+      {
+        path: 'flashcard',
+        loadChildren : './flashcards/flashcards.module#FlashcardsModule',
       },
       {
         path: 'material', 
