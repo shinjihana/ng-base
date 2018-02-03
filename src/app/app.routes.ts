@@ -12,6 +12,10 @@ export const rootRouterConfig: Routes = [
     pathMatch: 'full' 
   },
   {
+    path: 'flashcard',
+    loadChildren : './flashcards/flashcards.module#FlashcardsModule',
+  },
+  {
     path: '', 
     component: AuthLayoutComponent,
     children: [
