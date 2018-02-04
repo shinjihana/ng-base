@@ -9,6 +9,7 @@ import { rootRouterConfig } from './app.routes';
 
 import { AppCommonModule } from "./core/components/app-common.module";
 import { FlashcardsModule } from './flashcards/flashcards.module';
+import { CoreModule } from './core/core.module';
 
 import { AppComponent } from './app.component';
 
@@ -26,9 +27,6 @@ export function createTranslateLoader(http: Http) {
  * 
  */
 
-/**
- * ngrx setting
- */
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 
@@ -44,6 +42,7 @@ import { environment } from '../environments/environment';
     HttpModule,
     AppCommonModule,
     FlashcardsModule,
+    CoreModule,
     TranslateModule.forRoot({
       provide: TranslateLoader,
       useFactory: (createTranslateLoader),

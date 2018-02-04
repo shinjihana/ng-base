@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CoreRoutingModule } from './core-routing.module';
-import { AdminLayoutComponent } from 'app/core/components/layouts/admin-layout/admin-layout.component';
+import { AdminLayoutComponent } from './components/layouts/admin-layout/admin-layout.component';
+import { AppCommonModule } from './components/app-common.module';
 
 export const COMPONENTS = [
   AdminLayoutComponent,
@@ -13,6 +14,7 @@ export const COMPONENTS = [
   imports: [
     CommonModule,
     CoreRoutingModule,
+    AppCommonModule,
     MaterialModule
   ],
   declarations: COMPONENTS,
