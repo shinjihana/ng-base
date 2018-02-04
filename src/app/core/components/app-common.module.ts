@@ -5,24 +5,32 @@ import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule } from "@angular/router";
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TranslateModule } from 'ng2-translate/ng2-translate';
-
-import { MaterialModule } from '../../material';
+import { 
+  MatSidenavModule,
+  MatListModule,
+  MatTooltipModule,
+  MatOptionModule,
+  MatSelectModule,
+  MatMenuModule,
+  MatSnackBarModule,
+  MatGridListModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatButtonModule,
+  MatRadioModule,
+  MatCheckboxModule,
+  MatCardModule,
+  MatProgressSpinnerModule
+} from '@angular/material';
 import { TopbarComponent } from './topbar/topbar.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { NotificationsComponent } from './notifications/notifications.component';
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { CommonDirectivesModule } from './../directives/common/common-directives.module';
 import { ThemeService } from './../services/theme/theme.service';
 import { CustomizerComponent } from './customizer/customizer.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
-
-export const COMPONENTS = [
-  AuthLayoutComponent,
-  TopbarComponent, 
-  NavigationComponent, 
-  NotificationsComponent, CustomizerComponent, BreadcrumbComponent
-];
-
 
 @NgModule({
   imports: [
@@ -31,14 +39,32 @@ export const COMPONENTS = [
     BrowserModule,
     RouterModule,
     FlexLayoutModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatTooltipModule,
+    MatOptionModule,
+    MatSelectModule,
+    MatMenuModule,
+    MatSnackBarModule,
+    MatGridListModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatRadioModule,
+    MatCheckboxModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
     CommonDirectivesModule,
-    TranslateModule,
-    MaterialModule,
+    TranslateModule
   ],
   declarations: [
-    COMPONENTS
+    AdminLayoutComponent,
+    AuthLayoutComponent,
+    TopbarComponent, 
+    NavigationComponent, 
+    NotificationsComponent, CustomizerComponent, BreadcrumbComponent
   ],
   providers: [ThemeService],
-  exports: [COMPONENTS]
+  exports: []
 })
 export class AppCommonModule {}

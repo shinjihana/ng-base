@@ -8,7 +8,7 @@ import { AuthGuard } from './core/services/auth/auth.guard';
 export const rootRouterConfig: Routes = [
   { 
     path: '', 
-    redirectTo : '/core',
+    redirectTo: 'core', 
     pathMatch: 'full' 
   },
   {
