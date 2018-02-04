@@ -20,6 +20,23 @@ export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
 }
 
+
+/**
+ * ngrx setting
+ * 
+ */
+
+/**
+ * ngrx setting
+ */
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+
+import { reducers, metaReducers } from './reducers';
+import { environment } from '../environments/environment';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -32,7 +49,10 @@ export function createTranslateLoader(http: Http) {
       useFactory: (createTranslateLoader),
       deps: [Http]
     }),
-    RouterModule.forRoot(rootRouterConfig, { useHash: false })
+    RouterModule.forRoot(rootRouterConfig, { useHash: false }),
+    StoreModule.forRoot(reducers, { metaReducers }),
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
+    EffectsModule.forRoot([]),
   ],
   declarations: [AppComponent],
   providers: [

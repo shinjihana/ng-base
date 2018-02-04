@@ -208,6 +208,13 @@ export class NavigationService {
       state: 'flashcard'      
     },
     {
+      name: 'Login',
+      type: 'link',
+      tooltip: 'Login',
+      icon: 'inbox',
+      state: 'login'    
+    },
+    {
       name: 'INBOX',
       type: 'link',
       tooltip: 'Inbox',
